@@ -11,22 +11,27 @@
                 rel="stylesheet"
             />
             <title>Conversor de Moedas</title>
+            <link rel="icon" type="imagem/png" href="../assets/alura.jpg" />
         </head>
         <body>
             <div class="container">
-                <h1 class="page-title">
-                    Conversor de moedas
-                </h1>
-                <p class="page-subtitle">
-                    Descubra os valores em real R$
-                </p>
-                <img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/logo-imersao-conversor-de-moedas.svg" class="page-logo" alt=""><br><br>
-                <label for="moeda">Insira o valor em Dolar</label><br>
-                <input type="number" id="valor" size="2" /><br>
-                <button type="submit" onclick="Converter()">Converter</button>
-                <h2 id="valorConvertido"></h2>
-            </div>
+                <div class="container">
+                    <h1 class="page-title">
+                        Conversor de moedas
+                    </h1>
+                    <img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/logo-imersao-aluraflix.svg" class="page-logo" alt="">
+                
+                </div>
                 <a href="https://alura.com.br/" target="_blank">
-                <img src="https://www.alura.com.br/assets/img/home/alura-logo.svg" alt="" class="alura-logo">
+                    <img src="https://www.alura.com.br/assets/img/home/alura-logo.svg" alt="" class="alura-logo">
+                    <img src="https://caelum-online-public.s3.amazonaws.com/assets-imersaodev/Convers%C3%A3o+1.png">
+                </a>
+            </div>
+            <div>
+                <label for="moeda" class="page-title">Insira o valor em Dolar:</label><br><br>
+                <input type="number" id="valor" size="2" /><br><br>
+                <button type="submit" onclick="ConverterDolarReal()">Converter</button><br><br>
+                <h2 class="page-title" id="valorConvertidoDolarReal"></h2>
+            </div>
         </body>
     </html>
