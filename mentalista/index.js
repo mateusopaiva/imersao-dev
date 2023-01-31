@@ -1,15 +1,32 @@
-var numeroSecreto = parseInt(Math.random() * 11);
+var numeroSecreto = parseInt(Math.random() * 1001);
+var tentativas = 10;
 
 function Chutar() {
+    
     var elementoResultado = document.getElementById("resultado");
     var chute = parseInt(document.getElementById("valor").value);
-    console.log(chute);
 
-    if(chute == numeroSecreto) {
-        elementoResultado.innerHTML = "Você acertou";
-    } else if(chute > 10|| chute < 0) {
-        elementoResultado.innerHTML = "Você deve digitar um número de 0 a 10";
+    if(tentativas != 1) {
+        if(chute == numeroSecreto) {
+            elementoResultado.innerHTML = "Acertou! o número secreto era " + numeroSecreto;
+            tentativas = 1;
+        } else if(chute > 1000 || chute < 0 || Number.isNaN(chute)) {
+            elementoResultado.innerHTML = "O número digitado é invalido";
+        } else {
+            if(chute > numeroSecreto) {
+                elementoResultado.innerHTML = "Errou, o número secreto é menor que " + chute;
+            }
+            else {
+                elementoResultado.innerHTML = "Errou, o número secreto é maior que " + chute;
+            }
+            tentativas--;
+            tentativa.innerHTML = tentativas + " tentativas";
+        }
+    } else if(chute == numeroSecreto) {
+        elementoResultado.innerHTML = "Você ganhou!";
     } else {
-        elementoResultado.innerHTML = "Errou";
+        tentativa.innerHTML = "Acabaram todas as tentativas";
+        elementoResultado.innerHTML = "Fim do Jogo!";
     }
+
 }
