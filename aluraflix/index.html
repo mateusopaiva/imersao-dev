@@ -11,6 +11,7 @@
                 rel="stylesheet"
             />
             <title>Aluraflix</title>
+            <link rel="icon" type="imagem/png" href="../assets/alura.jpg" />
         </head>
         <body>
             <div class="container">
@@ -18,9 +19,18 @@
                     Aluraflix
                 </h1>
                 <img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/logo-imersao-aluraflix.svg" class="page-logo" alt="">
+                <a href="https://alura.com.br/" target="_blank">
+                    <img src="https://www.alura.com.br/assets/img/home/alura-logo.svg" alt="" class="alura-logo">
+                </a>
+
+                <p class="page-subtitle">
+                    Qual seu filme ou serie favorita?
+                </p>
+                <div class="form-wrapper">
+                    <input type="text" id="filme" name="filme" placeholder="Insira endereço de imagem">
+                    <button onClick="adicionarFilme()">Adicionar Filme</button>
+                </div>
             </div>
-            <a href="https://alura.com.br/" target="_blank">
-                <img src="https://www.alura.com.br/assets/img/home/alura-logo.svg" alt="" class="alura-logo">
-            </a>
+            <div id="listaFilmes"></div>
         </body>
     </html>
